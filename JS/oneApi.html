@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="promises.js"></script>
 </head>
 <style>
     .card {
@@ -27,21 +28,21 @@
       </div>
 </body>
 <script>
-    const url = "https://api.github.com/users/syedjaleed"
-    const XMLH = new XMLHttpRequest()
-    XMLH.open('GET', url);
-    XMLH.onreadystatechange = function(){
-        console.log(XMLH.readyState);
-        if(XMLH.readyState === 4){
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
-            console.log(data.followers);
-            document.querySelector(".card img").setAttribute("src" , `${data.avatar_url}`);
-            document.querySelector("h4").innerHTML = `${data.name} , Followers : ${data.followers}`;
-            document.querySelector("h4").style.fontWeight = `bold`;
-            document.querySelector("p").innerHTML = `${data.bio}  ${data.blog}`   
-        }
-    }
-    XMLH.send()
+    // const url = "https://api.github.com/users/syedjaleed"
+    // const XMLH = new XMLHttpRequest()
+    // XMLH.open('GET', url);
+    // XMLH.onreadystatechange = function(){
+    //     console.log(XMLH.readyState);
+    //     if(XMLH.readyState === 4){
+    //         const data = JSON.parse(this.responseText)
+    //         console.log(typeof data);
+    //         console.log(data.followers);
+    //         document.querySelector(".card img").setAttribute("src" , `${data.avatar_url}`);
+    //         document.querySelector("h4").innerHTML = `${data.name} , Followers : ${data.followers}`;
+    //         document.querySelector("h4").style.fontWeight = `bold`;
+    //         document.querySelector("p").innerHTML = `${data.bio}  ${data.blog}`   
+    //     }
+    // }
+    // XMLH.send()
 </script>
 </html>
