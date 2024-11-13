@@ -38,7 +38,7 @@ const promiseFour = new Promise(function(resolve, reject){
         } else{
             reject('Error Something went wrong')
         }
-    },5000)
+    },0)
 })
 
 promiseFour.then((user) =>{
@@ -61,7 +61,7 @@ const promiseFive = new Promise(function(resolve, reject){
         } else{
             reject('ERROR: JS went wrong')
         }
-    },3000)
+    },1000)
 })
 
 async function consumePromiseFive(){
@@ -86,3 +86,19 @@ async function getAllUsers() {
 }
 
 getAllUsers();
+
+fetch('https://api.github.com/users/syedjaleed')
+.then((response) => {
+    return response.json();
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => {
+    console.log(error);
+})
+
+
+
+//// Fetchh
+
