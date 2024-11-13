@@ -1,9 +1,10 @@
 import './App.css'
+import Chai from './chai'
 
 function App() {
 
   return (
-   <h1>Chai with Vite | Jaleed</h1>
+   <Chai/>
   )
 }
 
